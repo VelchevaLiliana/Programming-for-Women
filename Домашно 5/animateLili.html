@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Animate</title>
+        <style>
+span 
+{
+                width: 20px;
+                height: 50px;
+                position: absolute;
+                color: blueviolet;
+                
+            }
+            button {
+                margin: 100px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>
+        <div id="lili"><span>L</span><span style="right:20px">i</span><span style="right:30px">l</span><span
+                style="right:40px">i</span></div>
+        </p>
+        <p>
+            <button onclick="animateName()">Натисни</button>
+        </p>
+        <script>
+            function myMove(elem, i) {
+                var pos = i * 50;//за разстояние между буквите
+                var fontSize = (i + 1) * 20;//първия индекс е 0, слагаме 1, за да не направи фонта 0 и да почне от там,растат с 20px
+                var id = null;
+                clearInterval(id);
+                id = setInterval(frame, 10);
+                function frame() {
+                    if (pos == 350 + (i * 40)) //да спрат на разстояние 40 една от друга
+                    {
+                        elem.style.top = 450 + 'px';
+                        elem.style.fontSize = 50 + 'px';
+                        clearInterval(id);
+                    } else {
+                        pos++;
+                        fontSize++;
+                        elem.style.top = pos + 'px';
+                        elem.style.left = pos + 'px';
+                        elem.style.fontSize = fontSize + 'px';
+                    }
+                }
+            }
+
+            function animateName() {
+
+                var elemes = document.getElementsByTagName('span');;
+
+                for (let i = 0; i < elemes.length; i++) {
+                    myMove(elemes[i], i);
+                }
+            }
+
+        </script>
+    </body>
+
+</html>
