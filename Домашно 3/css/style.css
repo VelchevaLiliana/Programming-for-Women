@@ -1,0 +1,52 @@
+h1,
+h2,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: rgb(88, 13, 88);
+}
+
+h2 {
+  color: violet;
+}
+
+* {
+  background-color: rgb(255, 192, 241);
+  padding: 1px;
+  margin: 20px;
+}
+/*
+#brown-header{
+    color:brown;
+}
+.greenClass{
+    color: aqua;
+}
+
+section h2 {
+    color: purple;
+}
+*/
+
+a:link {
+  color: pink;
+}
+a:hover {
+  cursor: alias;
+}
+a:active {
+  color: blueviolet;
+}
+a:visited {
+  color: brown;
+}
+
+header {
+  border-color: blueviolet;
+  border-width: 1px;
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px;
+}
